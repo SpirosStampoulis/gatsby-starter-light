@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-image`,
     },
-
+    
     {
       resolve: `@gatsbywpthemes/gatsby-plugin-gwpt-packages-light`,
       options: {
@@ -58,5 +58,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-build-newrelic",
+          options: {
+            NR_INSERT_KEY: process.env.NEW_RELIC_INSERT_KEY || '',
+            NR_LICENSE_KEY: process.env.NEW_RELIC_LICENSE_KEY || '',
+            NR_ACCOUNT_ID: process.env.NEW_RELIC_ACCOUNT_ID,
+            SITE_NAME: 'gatsbystarterlightmaster',
+            customTags: { gatsbySite: true }
+          }
+    }
   ],
 }

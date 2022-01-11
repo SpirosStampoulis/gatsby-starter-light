@@ -5,10 +5,11 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "dev": "rm -rf .cache && gatsby develop",
+    "dev-m": "gatsby develop -H local.esports-betting.pro -p 8000",
     "build": "gatsby build",
-    "develop": "gatsby develop --host 0.0.0.0",
+    "develop": "gatsby develop -H local.esports-betting.pro",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "npm run develop GATSBY_HOST",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "analyze": "rm -rf .cache && ANALYZE_BUNDLE_SIZE=true gatsby build"
@@ -19,6 +20,7 @@
     "@headlessui/react": "^1.4.1",
     "@kunukn/react-collapse": "^2.2.9",
     "gatsby": "^4.2.0",
+    "gatsby-build-newrelic": "^1.1.16",
     "gatsby-plugin-image": "^2.2.0",
     "gatsby-plugin-sharp": "^4.2.0",
     "gatsby-plugin-use-dark-mode": "^1.4.0",
