@@ -5,11 +5,11 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "dev": "rm -rf .cache && gatsby develop",
-    "dev-m": "gatsby develop -H local.esports-betting.pro -p 8000",
+    "dev-m": "gatsby develop",
     "build": "gatsby build",
-    "develop": "gatsby develop -H local.esports-betting.pro",
+    "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop GATSBY_HOST",
+    "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "analyze": "rm -rf .cache && ANALYZE_BUNDLE_SIZE=true gatsby build"
